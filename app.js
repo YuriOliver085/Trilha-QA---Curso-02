@@ -1,43 +1,52 @@
-// Criar uma função que exibe "Olá, mundo!" no console.
-function exibir() {
-    console.log("Olá, mundo!");
-  }
-  exibir();
+// Crie uma função que calcula o índice de massa corporal (IMC) de uma pessoa, a partir de sua altura, em metros, e peso, em quilogramas, que será recebida como parâmetro:
+function calcularIMC(altura, peso){
 
-// Criar uma função que recebe um nome como parâmetro e exibe "Olá, [nome]!" no console. 
-function exibirNome(nome) {
-    console.log(`Olá, ${nome}!`);
-  }
-  exibirNome("Yuri");
+  let imc = peso / (alturaMetro * alturaMetro);
+}
 
-// Criar uma função que recebe um número como parâmetro e retorna o dobro desse número.
-function calcularDobro(numero) {
-    return numero * 2;
+// Crie uma função que calcula o valor do fatorial de um número passado como parâmetro.
+function Fatorial(numero) {
+  if (numero === 0 || numero === 1) {
+    return 1;
   }
+
+  let fatorial = 1;
+  for (let i = 2; i <= numero; i++) {
+    fatorial *= i;
+  }
+
+  return fatorial;
+}
+
+// Crie uma função que converte um valor em dólar, passado como parâmetro, e retorna o valor equivalente em reais. Para isso, considere uma cotação do dólar igual a R$ 4,80.
+function converterDolar(valorEmDolar) {
+  let cotacaoDolar = 4.80;
+  let valorEmReais = valorEmDolar * cotacaoDolar;
+  return valorEmReais.toFixed(2);
+}
+
+// Crie uma função que mostra na tela a área e o perímetro de uma sala retangular, utilizando altura e largura que serão dadas como parâmetro.
+function calcularArea(altura, largura) {
+  let area = altura * largura;
+  let perimetro = 2 * (altura + largura);
   
-  let resultado = calcularDobro(7);
-  console.log(resultado);
+  console.log(`Área da sala: ${area} metros quadrados`);
+  console.log(`Perímetro da sala: ${perimetro} metros`);
+}
 
-// Criar uma função que recebe três números como parâmetros e retorna a média deles.
-function calcularMediaMedia(a, b, c) {
-    return (a + b + c) / 3;
-  }
+// Crie uma função que mostra na tela a área e o perímetro de uma sala circular, utilizando seu raio que será fornecido como parâmetro. Considere Pi = 3,14.
+function calcularAreaCircular(raio) {
+  let area = Math.PI * raio * raio;
+  let perimetro = 2 * Math.PI * raio;
   
-  let media = calcularMedia(5, 7, 13);
-  console.log(media);
+  console.log(`Área da sala circular: ${area.toFixed(2)} metros quadrados`);
+  console.log(`Perímetro da sala circular: ${perimetro.toFixed(2)} metros`);
+}
 
-// Criar uma função que recebe dois números como parâmetros e retorna o maior deles.
-function maior(a, b) {
-    return a > b ? a : b;
+// Crie uma função que mostra na tela a tabela de um número dado como parâmetro.
+function mostrarTabela(numero) {
+  for (let i = 1; i <= 10; i++) {
+    let resultado = numero * i;
+    console.log(`${numero} x ${i} = ${resultado}`);
   }
-  
-  let maiorNumero = maior(8, 10);
-  console.log(maiorNumero);
-
-// Criar uma função que recebe um número como parâmetro e retorna o resultado da multiplicação desse número por ele mesmo.
-function multiplicarPorSi(numero) {
-    return numero * numero;
-  }
-  
-  let resultado1 = multiplicarPorSi(2);
-  console.log(resultado1); 
+}
